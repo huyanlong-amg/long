@@ -207,7 +207,30 @@ body{
   cursor:pointer;
   /*border-radius: 10px;*/
   /*transform:translateY(-4px);*/
+  /*animation: action 10s linear infinite;*/
 }
+@keyframes action {
+  from{
+    transform: rotate(0deg);
+  }
+
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+/*@keyframes action {*/
+/*  0%{*/
+/*    transform: rotate(0deg);*/
+/*  }*/
+/*  50%{*/
+/*    transform: rotate(30deg);*/
+/*  }*/
+/*  100%{*/
+/*    transform: rotate(0deg);*/
+/*  }*/
+/*}*/
+
 .card-header{
   display: flex;
   justify-content: space-between;
@@ -290,6 +313,7 @@ body{
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  animation: action 10s linear infinite;
 }
 .card-author .name{
   color: #8a8e99;
