@@ -104,6 +104,7 @@
               <span class="name">杨连刚</span>
               <span class="tag tag-info">30K</span>
               <span class="tag tag-warning">12-3截止</span>
+              <span class="tag tag-warning">link</span>
             </div>
             <div class="card-content">
               微服务描述微服务描述微服务描述微服务描述微服务描述微服务描述微服务描述微服务描述微服务描述微服务描述微服务描述
@@ -578,7 +579,22 @@
   </div>
 </div>
 
-<!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>-->
-<!--<script src="script.js"></script>-->
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+<script src="script.js"></script>
+<script>
+
+  $(function(){
+    let query = getQuery()
+    console.log(query)
+
+  })
+  function getQuery() {
+    let query = location.search
+    query = query.substring(1).split('&')
+    return query
+  }
+
+</script>
 </body>
 </html>
