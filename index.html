@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -99,7 +100,8 @@
         <div class="content-item" id="story">
           <div class="content-item-title">需求池(6)</div>
           <div class="content-item-body">
-            <div class="card">
+            <div class="card" data-id="1">
+              <img src="close.png" alt="" class="close-img">
               <div class="card-header">
                 <div class="card-header-left">
                   <span class="tag tag-blue">NFVO</span>
@@ -114,7 +116,7 @@
 <!--                <span class="tag tag-error">Pinddig</span>-->
               </div>
               <div class="card-content">
-                规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述
+                wode 规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述
               </div>
             </div>
             <div class="card">
@@ -394,7 +396,27 @@
     </div>
   </div>
 
+
+  <div class="modal fade" tabindex="-1" role="dialog" >
+    <div class="modal-dialog" role="document" style="width: 400px">
+      <div class="modal-content">
+<!--        <div class="modal-header">-->
+<!--          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+<!--          <h4 class="modal-title">Modal title</h4>-->
+<!--        </div>-->
+        <div class="modal-body">
+          <p>One fine body&hellip;</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default  btn-sm" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary  btn-sm" onclick="deleteCard()">Save</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

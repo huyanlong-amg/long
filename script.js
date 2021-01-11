@@ -1,3 +1,4 @@
+let deleteCardEle
 $(function(){
   let data = [
     {
@@ -28,7 +29,20 @@ $(function(){
   let html = getCardHtml(data)
   $('#access .content-item-title span').text(data.length)
   $('#access .content-item-body').html(html)
+
+  $('.card .close-img ').on('click', function () {
+     $('.modal').modal('show')
+    // $(this).parent('.card').remove()
+    deleteCardEle = $(this).parent('.card')
+  })
 })
+
+function deleteCard() {
+  let data = deleteCardEle.data('id');
+  console.log(data)
+  deleteCardEle.remove()
+  $('.modal').modal('hide')
+}
 
 function getCardHtml (data) {
   let html = ''
