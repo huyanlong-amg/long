@@ -192,8 +192,16 @@ function getCardHtml(data) {
 
 // 初始化配置表单
 $(function () {
-    layui.use(['form'], function () {
-        addRuleFormObj = layui.form
+    layui.use(['form', 'laydate'], function () {
+        addRuleFormObj = layui.form;
+        let laydate = layui.laydate;
+
+
+        // 日期
+        laydate.render({
+            elem: '#time'
+            ,format: 'yyyyMMdd'
+        });
 
         // 绑定添加点击事件
         $('#addRuleBtn').on('click', function () {
