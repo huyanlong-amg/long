@@ -192,9 +192,13 @@ function getCardHtml(data) {
 
 // 初始化配置表单
 $(function () {
-    layui.use(['form', 'laydate'], function () {
+    layui.use(['form', 'laydate', 'layer'], function () {
+
         addRuleFormObj = layui.form;
-        let laydate = layui.laydate;
+        let laydate = layui.laydate,
+            layer = layui.layer;
+
+
 
 
         // 日期
@@ -258,8 +262,18 @@ $(function () {
             var data = addRuleFormObj.val('addRuleForm');
             data.server = selectedServerList
             console.log('data', data)
+
+            // //自定义验证规则
+            // form.verify({
+            //     name: function(value){
+            //         if(value.length < 5){
+            //             return '标题至少得5个字符啊';
+            //         }
+            //     }
+            // });
+
             if (data.name == '') {
-                layer.msg('请填写重构事务');
+                layer.msg('请填写重构事务', {icon: 6});
                 return
             }
             if (data.produce == '') {
@@ -272,6 +286,8 @@ $(function () {
             }
 
             // TODO: 调接口保存数据
+
+            $('#addRuleDialog').modal('hide')
         });
 
 
@@ -352,6 +368,7 @@ function removeSelectedServerItem(index) {
 
 function deleteCard() {
     // $('.modal').modal('hide')
+
     deleteCardEle.addClass('animated zoomOut')
     let data = deleteCardEle.data('id');
     setTimeout(function () {

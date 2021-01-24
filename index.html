@@ -1,517 +1,540 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="layui/css/layui.css">
-  <link rel="stylesheet" href="style.css">
-<!--  <link rel="stylesheet" href="animate.min.css">-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="style.css">
+    <!--  <link rel="stylesheet" href="animate.min.css">-->
 
-  <link rel="stylesheet"  href="animate.min.css">
+    <link rel="stylesheet" href="animate.min.css">
 </head>
 <body>
-  <div class="header"></div>
-  <div class="content">
+<div class="header"></div>
+<div class="content">
     <div class="menu">
-      <div class="menu-title">重构规划数量统计</div>
-      <div class="num-box">
-        <div class="num-item">
-          <span class="number">79</span>
-          <span class="desc">规划总数</span>
+        <div class="menu-title">重构规划数量统计</div>
+        <div class="num-box">
+            <div class="num-item">
+                <span class="number">79</span>
+                <span class="desc">规划总数</span>
+            </div>
+            <div class="line"></div>
+            <div class="num-item">
+                <span class="number">13</span>
+                <span class="desc">本月新增</span>
+            </div>
+            <div class="line"></div>
+            <div class="num-item">
+                <span class="number">2</span>
+                <span class="desc">一周内截止</span>
+            </div>
         </div>
-        <div class="line"></div>
-        <div class="num-item">
-          <span class="number">13</span>
-          <span class="desc">本月新增</span>
-        </div>
-        <div class="line"></div>
-        <div class="num-item">
-          <span class="number">2</span>
-          <span class="desc">一周内截止</span>
-        </div>
-      </div>
-      <div class="menu-title">重构规划层级统计</div>
-      <ul class="menu-list">
-        <li class="menu-list-item">
-          <span class="text">重构层级L1</span>
-          <span class="count">16</span>
-        </li>
-        <li class="menu-list-item">
-          <span class="text">重构层级L2</span>
-          <span class="count">5</span>
-        </li>
-        <li class="menu-list-item">
-          <span class="text">重构层级L3</span>
-          <span class="count">8</span>
-        </li>
-        <li class="menu-list-item">
-          <span class="text">重构层级L4</span>
-          <span class="count">24</span>
-        </li>
-      </ul>
-      <div class="menu-title">我的重构规划</div>
-      <ul class="menu-list">
-        <li class="menu-list-item">
-          <span class="text">我发布的重构规划</span>
-          <span class="count">2</span>
-        </li>
-        <li class="menu-list-item">
-          <span class="text">我负责的重构子项</span>
-          <span class="count">1</span>
-        </li>
-        <li class="menu-list-item">
-          <span class="text">我参与的重构规划</span>
-          <span class="count">2</span>
-        </li>
-      </ul>
+        <div class="menu-title">重构规划层级统计</div>
+        <ul class="menu-list">
+            <li class="menu-list-item">
+                <span class="text">重构层级L1</span>
+                <span class="count">16</span>
+            </li>
+            <li class="menu-list-item">
+                <span class="text">重构层级L2</span>
+                <span class="count">5</span>
+            </li>
+            <li class="menu-list-item">
+                <span class="text">重构层级L3</span>
+                <span class="count">8</span>
+            </li>
+            <li class="menu-list-item">
+                <span class="text">重构层级L4</span>
+                <span class="count">24</span>
+            </li>
+        </ul>
+        <div class="menu-title">我的重构规划</div>
+        <ul class="menu-list">
+            <li class="menu-list-item">
+                <span class="text">我发布的重构规划</span>
+                <span class="count">2</span>
+            </li>
+            <li class="menu-list-item">
+                <span class="text">我负责的重构子项</span>
+                <span class="count">1</span>
+            </li>
+            <li class="menu-list-item">
+                <span class="text">我参与的重构规划</span>
+                <span class="count">2</span>
+            </li>
+        </ul>
     </div>
     <div class="right">
-      <div class="condition">
-        <div class="condition-left">
-          <select class="select-year" name="year" id="year">
-            <option value="2020">2020年</option>
-            <option value="2021">2021年</option>
-            <option value="2022">2022年</option>
-            <option value="2023">2023年</option>
-            <option value="2024">2024年</option>
-          </select>
-          <div class="search-input-wrapper">
-            <input class="search-input" type="text" placeholder="搜索">
-            <img class="search-icon" src="./search.png" alt="">
-          </div>
-          <select class="select-level" name="year" id="year">
-            <option value="">等级筛选</option>
-            <option value="1">等级</option>
-            <option value="2">等级</option>
-            <option value="3">等级</option>
-            <option value="4">等级</option>
-          </select>
-          <select class="select-status" name="year" id="year">
-            <option value="">状态筛选</option>
-            <option value="1">状态</option>
-            <option value="2">状态</option>
-            <option value="3">状态</option>
-            <option value="4">状态</option>
-          </select>
-        </div>
-        <div class="condition-right">
-          <button id="addRuleBtn">新建规划</button>
-        </div>
-      </div>
-      <div class="content">
-        <div class="content-item" id="story">
-          <div class="content-item-title">需求池(6)</div>
-          <div class="content-item-body">
-            <div class="card" data-id="66">
-              <img src="delete01.png" alt="" class="close-img">
-              <div class="card-header">
-                <div class="card-header-left">
-                  <span class="tag tag-blue">NFVO</span>
-                  <span class="card-header-left-text">重构规划名称</span>
-                </div>
-              </div>
-              <div class="card-author">
-                <img class="avatar" src="./avatar.jpeg" alt="">
-                <span class="name">杨连刚</span>
-                <span class="tag tag-info">30K</span>
-                <span class="tag tag-warning layui-btn">12-3截止</span>
-                <span id="xiafa" class="tag tag-error layui-btn">下发</span>
-              </div>
-              <div class="card-content">
-                wode 规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">
-                <div class="card-header-left">
-                  <span class="tag tag-blue">NFVO</span>
-                  <span class="card-header-left-text">测试删除</span>
-                </div>
-              </div>
-              <div class="card-author">
-                <img class="avatar" src="./avatar.jpeg" alt="">
-                <span class="name">杨连刚</span>
-                <span class="tag tag-info">30K</span>
-                <span class="tag tag-warning">12-3截止</span>
-                <!--                <span class="tag tag-error">Pinddig</span>-->
-              </div>
-              <div class="card-content">
-                规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">
-                <div class="card-header-left">
-                  <span class="tag tag-blue">NFVO</span>
-                  <span class="card-header-left-text">重构规划名称</span>
-                </div>
-              </div>
-              <div class="card-author">
-                <img class="avatar" src="./avatar.jpeg" alt="">
-                <span class="name">杨连刚</span>
-                <span class="tag tag-info">30K</span>
-                <span class="tag tag-warning">12-3截止</span>
-                <!--                <span class="tag tag-error">Pinddig</span>-->
-              </div>
-              <div class="card-content">
-                规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述
-              </div>
-            </div>
-            <div class="card">
-              <img src="delete01.png" alt="" class="close-img">
-              <div class="card-header">
-                <div class="card-header-left">
-                  <span class="tag tag-blue">NFVO</span>
-                  <span class="card-header-left-text">重构规划名称</span>
-                </div>
-              </div>
-              <div class="card-author">
-                <img class="avatar" src="./avatar.jpeg" alt="">
-                <span class="name">杨连刚</span>
-                <span class="tag tag-info">30K</span>
-                <span class="tag tag-warning">12-3截止</span>
-                <!--                <span class="tag tag-error">Pinddig</span>-->
-              </div>
-              <div class="card-content">
-                规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">
-                <div class="card-header-left">
-                  <span class="tag tag-blue">NFVO</span>
-                  <span class="card-header-left-text">重构规划名称</span>
-                </div>
-              </div>
-              <div class="card-author">
-                <img class="avatar" src="./avatar.jpeg" alt="">
-                <span class="name">杨连刚</span>
-                <span class="tag tag-info">30K</span>
-                <span class="tag tag-warning">12-3截止</span>
-                <!--                <span class="tag tag-error">Pinddig</span>-->
-              </div>
-              <div class="card-content">
-                规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">
-                <div class="card-header-left">
-                  <span class="tag tag-blue">NFVO</span>
-                  <span class="card-header-left-text">重构规划名称</span>
-                </div>
-              </div>
-              <div class="card-author">
-                <img class="avatar" src="./avatar.jpeg" alt="">
-                <span class="name">杨连刚</span>
-                <span class="tag tag-info">30K</span>
-                <span class="tag tag-warning">12-3截止</span>
-                <!--                <span class="tag tag-error">Pinddig</span>-->
-              </div>
-              <div class="card-content">
-                规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="content-item">
-          <div class="content-item-title">NFVO业务域(6)</div>
-          <div class="content-item-body">
-            <div class="card">
-              <div class="card-header">
-                <div class="card-header-left">
-                  <span class="card-header-left-text">CMDB交互工具CBB</span>
-                </div>
-                <div class="card-header-right">
-                  <div class="index-text"><span>NO02256355</span></div>
-                </div>
-              </div>
-              <div class="card-author">
-                <img class="avatar" src="./avatar.jpeg" alt="">
-                <span class="name">杨连刚</span>
-                <span class="tag tag-info">30K</span>
-                <span class="tag tag-warning">12-3截止</span>
-                <span class="tag tag-blue">Closed</span>
-                <a class="tag tag-warning" href="./meco.html?id=1&name=dronge" target="_blank">link</a>
-              </div>
-              <div class="card-content">
-                2020/8/15：已部分转测（由于涉及微服务比较多，当前转测微服务数量约60%）<br/>
-                2020/7/30：已部分转测（由于涉及微服务比较多，当前转测微服务数量约40%）<br/>
-                2020/7/15：转测推迟到7.30
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">
-                <div class="card-header-left">
-                  <span class="card-header-left-text">CMDB交互工具CBB</span>
-                </div>
-                <div class="card-header-right">
-                  <div class="index-text"><span></span></div>
-                </div>
-              </div>
-              <div class="card-author">
-                <img class="avatar" src="./avatar.jpeg" alt="">
-                <span class="name">杨连刚</span>
-                <span class="tag tag-info">30K</span>
-                <span class="tag tag-warning">12-3截止</span>
-                <span class="tag tag-blue">Closed</span>
-              </div>
-              <div class="card-content">
-                2020/8/15：已部分转测（由于涉及微服务比较多，当前转测微服务数量约60%）<br/>
-                2020/7/30：已部分转测（由于涉及微服务比较多，当前转测微服务数量约40%）<br/>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">
-                <div class="card-header-left">
-                  <span class="card-header-left-text">CMDB交互工具CBB</span>
-                </div>
-                <div class="card-header-right">
-                  <div class="index-text"><span>NO02256355</span></div>
-                </div>
-              </div>
-              <div class="card-author">
-                <img class="avatar" src="./avatar.jpeg" alt="">
-                <span class="name">杨连刚</span>
-                <span class="tag tag-info">30K</span>
-                <span class="tag tag-warning">12-3截止</span>
-                <span class="tag tag-blue">Closed</span>
-              </div>
-              <div class="card-content">
-                2020/8/15：已部分转测（由于涉及微服务比较多，当前转测微服务数量约60%）
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">
-                <div class="card-header-left">
-                  <span class="card-header-left-text">CMDB交互工具CBB</span>
-                </div>
-                <div class="card-header-right">
-                  <div class="index-text"><span></span></div>
-                </div>
-              </div>
-              <div class="card-author">
-                <img class="avatar" src="./avatar.jpeg" alt="">
-                <span class="name">杨连刚</span>
-                <span class="tag tag-info">30K</span>
-                <span class="tag tag-warning">12-3截止</span>
-                <span class="tag tag-blue">Closed</span>
-              </div>
-              <div class="card-content">
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">
-                <div class="card-header-left">
-                  <span class="card-header-left-text">CMDB交互工具CBB</span>
-                </div>
-                <div class="card-header-right">
-                  <div class="index-text"><span>NO02256355</span></div>
-                </div>
-              </div>
-              <div class="card-author">
-                <img class="avatar" src="./avatar.jpeg" alt="">
-                <span class="name">杨连刚</span>
-                <span class="tag tag-info">30K</span>
-                <span class="tag tag-warning">12-3截止</span>
-                <span class="tag tag-blue">Closed</span>
-              </div>
-              <div class="card-content">
-                2020/8/15：已部分转测（由于涉及微服务比较多，当前转测微服务数量约60%）<br/>
-                2020/7/30：已部分转测（由于涉及微服务比较多，当前转测微服务数量约40%）<br/>
-                2020/7/15：转测推迟到7.30
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">
-                <div class="card-header-left">
-                  <span class="card-header-left-text">CMDB交互工具CBB</span>
-                </div>
-                <div class="card-header-right">
-                  <div class="index-text"><span>NO02256355</span></div>
-                </div>
-              </div>
-              <div class="card-author">
-                <img class="avatar" src="./avatar.jpeg" alt="">
-                <span class="name">杨连刚</span>
-                <span class="tag tag-info">30K</span>
-                <span class="tag tag-warning">12-3截止</span>
-                <span class="tag tag-blue">Closed</span>
-              </div>
-              <div class="card-content">
-                2020/8/15：已部分转测（由于涉及微服务比较多，当前转测微服务数量约60%）<br/>
-                2020/7/30：已部分转测（由于涉及微服务比较多，当前转测微服务数量约40%）<br/>
-                2020/7/15：转测推迟到7.30
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">
-                <div class="card-header-left">
-                  <span class="card-header-left-text">CMDB交互工具CBB</span>
-                </div>
-                <div class="card-header-right">
-                  <div class="index-text"><span>NO02256355</span></div>
-                </div>
-              </div>
-              <div class="card-author">
-                <img class="avatar" src="./avatar.jpeg" alt="">
-                <span class="name">杨连刚</span>
-                <span class="tag tag-info">30K</span>
-                <span class="tag tag-warning">12-3截止</span>
-                <span class="tag tag-blue">Closed</span>
-              </div>
-              <div class="card-content">
-                2020/8/15：已部分转测（由于涉及微服务比较多，当前转测微服务数量约60%）<br/>
-                2020/7/30：已部分转测（由于涉及微服务比较多，当前转测微服务数量约40%）<br/>
-                2020/7/15：转测推迟到7.30
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="content-item">
-          <div class="content-item-title" id="vnflcm">VNF-LCM业务域(<span></span>)</div>
-          <div class="content-item-body">
-            <div class="card">
-              <div class="card-header">
-                <div class="card-header-left">
-                  <!--                <span class="tag tag-blue">NFVO</span>-->
-                  <span class="card-header-left-text">CMDB交互工具CBB</span>
-                </div>
-              </div>
-              <div class="card-author">
-                <img class="avatar" src="./avatar.jpeg" alt="">
-                <span class="name">杨连刚</span>
-                <span class="tag tag-info">30K</span>
-                <span class="tag tag-warning">12-3截止</span>
-                <span class="tag tag-error">Pinddig</span>
-              </div>
-              <div class="card-content">
-                规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="content-item" id="access">
-          <div class="content-item-title">Access业务域(<span></span>)</div>
-          <div class="content-item-body"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div id="HighRiskFrame" class="modal fade" tabindex="-1" role="dialog" >
-    <div class="modal-dialog" role="document" style="width: 400px">
-      <div class="modal-content">
-<!--        <div class="modal-header">-->
-<!--          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
-<!--          <h4 class="modal-title">Modal title</h4>-->
-<!--        </div>-->
-        <div class="modal-body">
-          <p>One fine body&hellip;</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default  btn-sm" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary  btn-sm" onclick="deleteCard()">Save</button>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-
-
-  <!-- 编辑card模态框 -->
-  <div id="addRuleDialog" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">新增</h4>
-        </div>
-        <div class="modal-body">
-          <form class="layui-form" action="" lay-filter="addRuleForm">
-            <div class="layui-form-item">
-              <label class="layui-form-label layui-form-label_required">重构事务</label>
-              <div class="layui-input-block">
-                <input type="text" name="name" autocomplete="off" placeholder="请填写重构事务" class="layui-input">
-              </div>
-            </div>
-            <div class="layui-form-item">
-              <label class="layui-form-label layui-form-label_required">产品</label>
-              <div class="layui-input-block">
-                <select name="product" id="product" lay-filter="product">
-                  <option value="">请选择产品</option>
-                  <option value="product1">product1</option>
-                  <option value="product2">product2</option>
-                  <option value="product3">product3</option>
-                  <option value="product4">product4</option>
+        <div class="condition">
+            <div class="condition-left">
+                <select class="select-year" name="year" id="year">
+                    <option value="2020">2020年</option>
+                    <option value="2021">2021年</option>
+                    <option value="2022">2022年</option>
+                    <option value="2023">2023年</option>
+                    <option value="2024">2024年</option>
                 </select>
-              </div>
-            </div>
-
-            <div class="layui-form-item" id="serverItem">
-              <label class="layui-form-label">微服务</label>
-              <div class="layui-input-block server-wrapper">
-                <div class="server-content" id="serverContent">
+                <div class="search-input-wrapper">
+                    <input class="search-input" type="text" placeholder="搜索">
+                    <img class="search-icon" src="./search.png" alt="">
                 </div>
-                <div class="server-input" id="serviceIput">
-                  <div style="width: 200px; margin-right: 10px;">
-                    <select name="server" id="server">
-                      <option value="">请选择</option>
-                    </select>
-                  </div>
-                  <div style="width: 150px; margin-right: 10px;">
-                    <input type="text" id="codeNumber" name="codeNumber" autocomplete="off" placeholder="代码量" class="layui-input">
-                  </div>
-                  <button type="button" class="btn btn-primary btn-sm" id="addServerBtn">添加</button>
+                <select class="select-level" name="year" id="year">
+                    <option value="">等级筛选</option>
+                    <option value="1">等级</option>
+                    <option value="2">等级</option>
+                    <option value="3">等级</option>
+                    <option value="4">等级</option>
+                </select>
+                <select class="select-status" name="year" id="year">
+                    <option value="">状态筛选</option>
+                    <option value="1">状态</option>
+                    <option value="2">状态</option>
+                    <option value="3">状态</option>
+                    <option value="4">状态</option>
+                </select>
+            </div>
+            <div class="condition-right">
+                <button id="addRuleBtn">新建规划</button>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-item" id="story">
+                <div class="content-item-title">需求池(6)</div>
+                <div class="content-item-body">
+                    <div class="card" data-id="66">
+                        <img src="delete01.png" alt="" class="close-img">
+                        <div class="card-header">
+                            <div class="card-header-left">
+                                <span class="tag tag-blue">NFVO</span>
+                                <span class="card-header-left-text">重构规划名称</span>
+                            </div>
+                        </div>
+                        <div class="card-author">
+                            <img class="avatar" src="./avatar.jpeg" alt="">
+                            <span class="name">杨连刚</span>
+                            <span class="tag tag-info">30K</span>
+                            <span class="tag tag-warning layui-btn">12-3截止</span>
+                            <span id="xiafa" class="tag tag-error layui-btn">下发</span>
+                        </div>
+                        <div class="card-content">
+                            wode 规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-left">
+                                <span class="tag tag-blue">NFVO</span>
+                                <span class="card-header-left-text">测试删除</span>
+                            </div>
+                        </div>
+                        <div class="card-author">
+                            <img class="avatar" src="./avatar.jpeg" alt="">
+                            <span class="name">杨连刚</span>
+                            <span class="tag tag-info">30K</span>
+                            <span class="tag tag-warning">12-3截止</span>
+                            <!--                <span class="tag tag-error">Pinddig</span>-->
+                        </div>
+                        <div class="card-content">
+                            规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-left">
+                                <span class="tag tag-blue">NFVO</span>
+                                <span class="card-header-left-text">重构规划名称</span>
+                            </div>
+                        </div>
+                        <div class="card-author">
+                            <img class="avatar" src="./avatar.jpeg" alt="">
+                            <span class="name">杨连刚</span>
+                            <span class="tag tag-info">30K</span>
+                            <span class="tag tag-warning">12-3截止</span>
+                            <!--                <span class="tag tag-error">Pinddig</span>-->
+                        </div>
+                        <div class="card-content">
+                            规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="delete01.png" alt="" class="close-img">
+                        <div class="card-header">
+                            <div class="card-header-left">
+                                <span class="tag tag-blue">NFVO</span>
+                                <span class="card-header-left-text">重构规划名称</span>
+                            </div>
+                        </div>
+                        <div class="card-author">
+                            <img class="avatar" src="./avatar.jpeg" alt="">
+                            <span class="name">杨连刚</span>
+                            <span class="tag tag-info">30K</span>
+                            <span class="tag tag-warning">12-3截止</span>
+                            <!--                <span class="tag tag-error">Pinddig</span>-->
+                        </div>
+                        <div class="card-content">
+                            规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-left">
+                                <span class="tag tag-blue">NFVO</span>
+                                <span class="card-header-left-text">重构规划名称</span>
+                            </div>
+                        </div>
+                        <div class="card-author">
+                            <img class="avatar" src="./avatar.jpeg" alt="">
+                            <span class="name">杨连刚</span>
+                            <span class="tag tag-info">30K</span>
+                            <span class="tag tag-warning">12-3截止</span>
+                            <!--                <span class="tag tag-error">Pinddig</span>-->
+                        </div>
+                        <div class="card-content">
+                            规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-left">
+                                <span class="tag tag-blue">NFVO</span>
+                                <span class="card-header-left-text">重构规划名称</span>
+                            </div>
+                        </div>
+                        <div class="card-author">
+                            <img class="avatar" src="./avatar.jpeg" alt="">
+                            <span class="name">杨连刚</span>
+                            <span class="tag tag-info">30K</span>
+                            <span class="tag tag-warning">12-3截止</span>
+                            <!--                <span class="tag tag-error">Pinddig</span>-->
+                        </div>
+                        <div class="card-content">
+                            规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述规划的具体项目描述
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-
-<!--            <div class="layui-inline">-->
-<!--              <label class="layui-form-label">完成时间</label>-->
-<!--              <div class="layui-input-inline">-->
-<!--                <input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">-->
-<!--              </div>-->
-<!--            </div>-->
-
-            <div class="layui-form-item">
-              <label class="layui-form-label layui-form-label_required">完成时间</label>
-              <div class="layui-input-block">
-                <input type="text" name="time" id="time" lay-verify="date" placeholder="yyyMMdd" autocomplete="off" class="layui-input">
-              </div>
+            <div class="content-item">
+                <div class="content-item-title">NFVO业务域(6)</div>
+                <div class="content-item-body">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-left">
+                                <span class="card-header-left-text">CMDB交互工具CBB</span>
+                            </div>
+                            <div class="card-header-right">
+                                <div class="index-text"><span>NO02256355</span></div>
+                            </div>
+                        </div>
+                        <div class="card-author">
+                            <img class="avatar" src="./avatar.jpeg" alt="">
+                            <span class="name">杨连刚</span>
+                            <span class="tag tag-info">30K</span>
+                            <span class="tag tag-warning">12-3截止</span>
+                            <span class="tag tag-blue">Closed</span>
+                            <a class="tag tag-warning layui-btn" href="./meco.html?id=1&name=dronge" target="_blank">link</a>
+                        </div>
+                        <div class="card-content">
+                            2020/8/15：已部分转测（由于涉及微服务比较多，当前转测微服务数量约60%）<br/>
+                            2020/7/30：已部分转测（由于涉及微服务比较多，当前转测微服务数量约40%）<br/>
+                            2020/7/15：转测推迟到7.30
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-left">
+                                <span class="card-header-left-text">CMDB交互工具CBB</span>
+                            </div>
+                            <div class="card-header-right">
+                                <div class="index-text"><span></span></div>
+                            </div>
+                        </div>
+                        <div class="card-author">
+                            <img class="avatar" src="./avatar.jpeg" alt="">
+                            <span class="name">杨连刚</span>
+                            <span class="tag tag-info">30K</span>
+                            <span class="tag tag-warning">12-3截止</span>
+                            <span class="tag tag-blue">Closed</span>
+                        </div>
+                        <div class="card-content">
+                            2020/8/15：已部分转测（由于涉及微服务比较多，当前转测微服务数量约60%）<br/>
+                            2020/7/30：已部分转测（由于涉及微服务比较多，当前转测微服务数量约40%）<br/>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-left">
+                                <span class="card-header-left-text">CMDB交互工具CBB</span>
+                            </div>
+                            <div class="card-header-right">
+                                <div class="index-text"><span>NO02256355</span></div>
+                            </div>
+                        </div>
+                        <div class="card-author">
+                            <img class="avatar" src="./avatar.jpeg" alt="">
+                            <span class="name">杨连刚</span>
+                            <span class="tag tag-info">30K</span>
+                            <span class="tag tag-warning">12-3截止</span>
+                            <span class="tag tag-blue">Closed</span>
+                        </div>
+                        <div class="card-content">
+                            2020/8/15：已部分转测（由于涉及微服务比较多，当前转测微服务数量约60%）
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-left">
+                                <span class="card-header-left-text">CMDB交互工具CBB</span>
+                            </div>
+                            <div class="card-header-right">
+                                <div class="index-text"><span></span></div>
+                            </div>
+                        </div>
+                        <div class="card-author">
+                            <img class="avatar" src="./avatar.jpeg" alt="">
+                            <span class="name">杨连刚</span>
+                            <span class="tag tag-info">30K</span>
+                            <span class="tag tag-warning">12-3截止</span>
+                            <span class="tag tag-blue">Closed</span>
+                        </div>
+                        <div class="card-content">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-left">
+                                <span class="card-header-left-text">CMDB交互工具CBB</span>
+                            </div>
+                            <div class="card-header-right">
+                                <div class="index-text"><span>NO02256355</span></div>
+                            </div>
+                        </div>
+                        <div class="card-author">
+                            <img class="avatar" src="./avatar.jpeg" alt="">
+                            <span class="name">杨连刚</span>
+                            <span class="tag tag-info">30K</span>
+                            <span class="tag tag-warning">12-3截止</span>
+                            <span class="tag tag-blue">Closed</span>
+                        </div>
+                        <div class="card-content">
+                            2020/8/15：已部分转测（由于涉及微服务比较多，当前转测微服务数量约60%）<br/>
+                            2020/7/30：已部分转测（由于涉及微服务比较多，当前转测微服务数量约40%）<br/>
+                            2020/7/15：转测推迟到7.30
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-left">
+                                <span class="card-header-left-text">CMDB交互工具CBB</span>
+                            </div>
+                            <div class="card-header-right">
+                                <div class="index-text"><span>NO02256355</span></div>
+                            </div>
+                        </div>
+                        <div class="card-author">
+                            <img class="avatar" src="./avatar.jpeg" alt="">
+                            <span class="name">杨连刚</span>
+                            <span class="tag tag-info">30K</span>
+                            <span class="tag tag-warning">12-3截止</span>
+                            <span class="tag tag-blue">Closed</span>
+                        </div>
+                        <div class="card-content">
+                            2020/8/15：已部分转测（由于涉及微服务比较多，当前转测微服务数量约60%）<br/>
+                            2020/7/30：已部分转测（由于涉及微服务比较多，当前转测微服务数量约40%）<br/>
+                            2020/7/15：转测推迟到7.30
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-left">
+                                <span class="card-header-left-text">CMDB交互工具CBB</span>
+                            </div>
+                            <div class="card-header-right">
+                                <div class="index-text"><span>NO02256355</span></div>
+                            </div>
+                        </div>
+                        <div class="card-author">
+                            <img class="avatar" src="./avatar.jpeg" alt="">
+                            <span class="name">杨连刚</span>
+                            <span class="tag tag-info">30K</span>
+                            <span class="tag tag-warning">12-3截止</span>
+                            <span class="tag tag-blue">Closed</span>
+                        </div>
+                        <div class="card-content">
+                            2020/8/15：已部分转测（由于涉及微服务比较多，当前转测微服务数量约60%）<br/>
+                            2020/7/30：已部分转测（由于涉及微服务比较多，当前转测微服务数量约40%）<br/>
+                            2020/7/15：转测推迟到7.30
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="layui-form-item">
-              <label class="layui-form-label">状态</label>
-              <div class="layui-input-block">
-                <input type="radio" name="status" value="1" title="Designing" checked="">
-                <input type="radio" name="status" value="2" title="Open">
-                <input type="radio" name="status" value="3" title="Closed">
-                <input type="radio" name="status" value="4" title="Hang">
-                <input type="radio" name="status" value="5" title="Pending">
-              </div>
+            <div class="content-item">
+                <div class="content-item-title" id="vnflcm">VNF-LCM业务域(<span></span>)</div>
+                <div class="content-item-body">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-left">
+                                <!--                <span class="tag tag-blue">NFVO</span>-->
+                                <span class="card-header-left-text">CMDB交互工具CBB</span>
+                            </div>
+                        </div>
+                        <div class="card-author">
+                            <img class="avatar" src="./avatar.jpeg" alt="">
+                            <span class="name">杨连刚</span>
+                            <span class="tag tag-info">30K</span>
+                            <span class="tag tag-warning">12-3截止</span>
+                            <span class="tag tag-error">Pinddig</span>
+                        </div>
+                        <div class="card-content">
+                            规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述规划描述
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="layui-form-item layui-form-text">
-              <label class="layui-form-label">最新进展</label>
-              <div class="layui-input-block">
-                <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
-              </div>
+            <div class="content-item" id="access">
+                <div class="content-item-title">Access业务域(<span></span>)</div>
+                <div class="content-item-body"></div>
             </div>
-          </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-          <button type="button" class="btn btn-primary" id="submitAddRuleBtn" lay-filter="demo1">保存</button>
-        </div>
-      </div>
     </div>
-  </div>
-  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
-  <script src="script.js"></script>
-  <script src="layui/layui.all.js"></script>
-  <script src="layui/layui.js"></script>
+</div>
+
+
+<div id="HighRiskFrame" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document" style="width: 400px">
+        <div class="modal-content">
+            <!--        <div class="modal-header">-->
+            <!--          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+            <!--          <h4 class="modal-title">Modal title</h4>-->
+            <!--        </div>-->
+            <div class="modal-body">
+                <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default  btn-sm" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary  btn-sm" onclick="deleteCard()">Save</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<!-- 编辑card模态框 -->
+<div id="addRuleDialog" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">新增</h4>
+            </div>
+            <div class="modal-body">
+                <form class="layui-form" action="" lay-filter="addRuleForm" id="forma">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">重构事务</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="name" autocomplete="off" placeholder="请填写重构事务" class="layui-input"
+                                   lay-verify="required" lay-reqtext="用户名是必填项，岂能为空？">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label layui-form-label_required">产品</label>
+                        <div class="layui-input-block">
+                            <select name="product" id="product" lay-filter="product">
+                                <option value="">请选择产品</option>
+                                <option value="product1">product1</option>
+                                <option value="product2">product2</option>
+                                <option value="product3">product3</option>
+                                <option value="product4">product4</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item" id="serverItem">
+                        <label class="layui-form-label">微服务</label>
+                        <div class="layui-input-block server-wrapper">
+                            <div class="server-content" id="serverContent">
+                            </div>
+                            <div class="server-input" id="serviceIput">
+                                <div style="width: 200px; margin-right: 10px;">
+                                    <select name="server" id="server" lay-search>
+                                        <option value="">请选择</option>
+                                    </select>
+                                </div>
+                                <div style="width: 150px; margin-right: 10px;">
+                                    <input type="text" id="codeNumber" name="codeNumber" autocomplete="off"
+                                           placeholder="代码量" class="layui-input">
+                                </div>
+                                <button type="button" class="btn btn-primary btn-sm" id="addServerBtn">添加</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">重构事务</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="name" autocomplete="off" placeholder="请填写重构事务"
+                                       class="layui-input" lay-verify="required" lay-reqtext="用户名是必填项，岂能为空？">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                          <label class="layui-form-label">重构事务</label>
+                          <div class="layui-input-inline">
+                            <input type="text" name="name" autocomplete="off" placeholder="请填写重构事务"
+                                   class="layui-input" lay-verify="required" lay-reqtext="用户名是必填项，岂能为空？">
+                          </div>
+                        </div>
+                    </div>
+
+                    <!--            <div class="layui-inline">-->
+                    <!--              <label class="layui-form-label">完成时间</label>-->
+                    <!--              <div class="layui-input-inline">-->
+                    <!--                <input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">-->
+                    <!--              </div>-->
+                    <!--            </div>-->
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label layui-form-label_required">完成时间</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="time" id="time" lay-verify="date" placeholder="yyyMMdd"
+                                   autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">状态</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="status" value="1" title="Designing" checked="">
+                            <input type="radio" name="status" value="2" title="Open">
+                            <input type="radio" name="status" value="3" title="Closed">
+                            <input type="radio" name="status" value="4" title="Hang">
+                            <input type="radio" name="status" value="5" title="Pending">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">最新进展</label>
+                        <div class="layui-input-block">
+                            <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="submitAddRuleBtn" lay-filter="demo1">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+<!--  <script src="layui/layui.all.js"></script>-->
+<script src="layui/layui.js"></script>
 
 </body>
 </html>
