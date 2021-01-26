@@ -405,3 +405,19 @@ function issueStory(id) {
     }
   });
 }
+
+$(function () {
+
+    let text = document.getElementById('input_text')//找到对应的input框
+    function inputText() {
+        let timeout;  //用来就收定时器返回值
+
+        return function () {
+            clearTimeout(timeout);  //每次触发input值改变时，首先清空上一次的setTimeout
+            timeout = setTimeout(() => {
+                alert(text.value)// 弹出input的内容
+            } ,500) // 注意的是如果你写的代码用有用到this，要提前声明this是谁，因为在箭头函数中没有this指向
+        }
+    }
+    text.oninput = inputText()
+})

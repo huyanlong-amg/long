@@ -78,7 +78,7 @@
                     <option value="2024">2024年</option>
                 </select>
                 <div class="search-input-wrapper">
-                    <input class="search-input" type="text" placeholder="搜索">
+                    <input class="search-input" type="text" placeholder="搜索" id="input_text">
                     <img class="search-icon" src="./search.png" alt="">
                 </div>
                 <select class="select-level" name="year" id="year">
@@ -438,6 +438,14 @@
                         <div class="layui-input-block">
                             <input type="text" name="name" autocomplete="off" placeholder="请填写重构事务" class="layui-input"
                                    lay-verify="required" lay-reqtext="用户名是必填项，岂能为空？">
+                            <div class="userSearch" style="display: none; height: auto;">
+                                <li data-key="huyanlong">
+                                    <span>胡雁龙</span>
+                                </li>
+                                <li data-key="lihua">
+                                    <span>梨花</span>
+                                </li>
+                            </div>
                         </div>
                     </div>
                     <div class="layui-form-item">
@@ -475,18 +483,16 @@
 
                     <div class="layui-form-item">
                         <div class="layui-inline">
-                            <label class="layui-form-label">重构事务</label>
+                            <label class="layui-form-label">验证手机</label>
                             <div class="layui-input-inline">
-                                <input type="text" name="name" autocomplete="off" placeholder="请填写重构事务"
-                                       class="layui-input" lay-verify="required" lay-reqtext="用户名是必填项，岂能为空？">
+                                <input type="tel" name="phone" lay-verify="required|phone" autocomplete="off" class="layui-input">
                             </div>
                         </div>
                         <div class="layui-inline">
-                          <label class="layui-form-label">重构事务</label>
-                          <div class="layui-input-inline">
-                            <input type="text" name="name" autocomplete="off" placeholder="请填写重构事务"
-                                   class="layui-input" lay-verify="required" lay-reqtext="用户名是必填项，岂能为空？">
-                          </div>
+                            <label class="layui-form-label">验证邮箱</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="email" lay-verify="email" autocomplete="off" class="layui-input">
+                            </div>
                         </div>
                     </div>
 
